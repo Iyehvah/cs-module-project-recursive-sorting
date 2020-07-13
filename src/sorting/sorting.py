@@ -8,19 +8,19 @@ def merge(arrA, arrB):
     b = 0 #right pointer
 
     for i in range(elements):
-        #if we are out of elements on the left
+        #if our a array is full push the rest of our value into array b
         if a >= len(arrA):
             merged_arr[i] = arrB[b]
             b += 1
-        #if we are out of elements on the right
+        #if our b array is full push the rest of our values into array a
         elif b >= len(arrB):
             merged_arr[i] = arrA[a]
             a += 1
-        #if the left is smaller
+        #if array a is smaller than array b push value into array a
         elif arrA[a] < arrB[b]:
             merged_arr[i] = arrA[a]
             a += 1
-        #if the right is smaller
+        #if array b is smaller push values into array b
         else:
             merged_arr[i] = arrB[b]
             b += 1
